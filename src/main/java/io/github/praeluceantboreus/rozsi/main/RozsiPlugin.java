@@ -5,6 +5,7 @@ import io.github.praeluceantboreus.rozsi.writer.CubSerializer;
 
 import java.io.File;
 
+import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -42,7 +43,9 @@ public class RozsiPlugin extends JavaPlugin
 			if (args.length >= 1)
 			{
 				File file = new File(args[0]);
-				CubSerializer.writeLocs(marking.getLeft((Player) sender), marking.getRight((Player) sender), file);
+				CubSerializer cs = new CubSerializer();
+				cs.writeLocs(marking.getLeft((Player) sender), marking.getRight((Player) sender), file);
+				sender.sendMessage(ChatColor.GREEN + "Saved...");
 				return true;
 			}
 		}
