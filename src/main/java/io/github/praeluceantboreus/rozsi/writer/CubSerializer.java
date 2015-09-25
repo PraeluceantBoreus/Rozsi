@@ -23,6 +23,7 @@ public class CubSerializer
 					}
 				}
 			}
+			fos.flush();
 		} catch (IOException e)
 		{
 			// TODO Auto-generated catch block

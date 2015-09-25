@@ -2,3 +2,7 @@ name: Rozsi
 author: Richard Stöckl
 main: io.github.praeluceantboreus.rozsi.main.RozsiPlugin
 version: 0.0.1-NEPTUNIUM
+commands:
+  savecons:
+    usage: /savecons
+    description: saves construct
